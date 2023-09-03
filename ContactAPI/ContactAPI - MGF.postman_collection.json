@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "e84238a4-09b2-417a-a098-78779d04c9aa",
+		"name": "ContactAPI - MGF",
+		"description": "**EndPoints for Contact API CRUD with Soft Delete and Location lookup.**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28532893"
+	},
+	"item": [
+		{
+			"name": "Contact List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/contactapi/src/api/contact/list.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"contactapi",
+						"src",
+						"api",
+						"contact",
+						"list.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single Contact Display",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/contactapi/src/api/contact/single.php?id=117",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"contactapi",
+						"src",
+						"api",
+						"contact",
+						"single.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "117"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contact By Location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/contactapi/src/api/contact/location.php?postcode=l9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"contactapi",
+						"src",
+						"api",
+						"contact",
+						"location.php"
+					],
+					"query": [
+						{
+							"key": "postcode",
+							"value": "l9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contact Soft Delete",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/contactapi/src/api/contact/delete.php?id=47",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"contactapi",
+						"src",
+						"api",
+						"contact",
+						"delete.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "47"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contact UNDO Delete",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/contactapi/src/api/contact/restore.php?id=46",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"contactapi",
+						"src",
+						"api",
+						"contact",
+						"restore.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "46"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstname",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "Directory",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "samsonson@gmail.comD",
+							"type": "text"
+						},
+						{
+							"key": "company_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/contactapi/src/api/contact/newcontact.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"contactapi",
+						"src",
+						"api",
+						"contact",
+						"newcontact.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstname",
+							"value": "OlawalePaulmy",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "Falolu",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "uncommoncommondity@outlook.com",
+							"type": "text"
+						},
+						{
+							"key": "company_id",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "117",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/contactapi/src/api/contact/editcontact.php?id=117",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"contactapi",
+						"src",
+						"api",
+						"contact",
+						"editcontact.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "117"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
