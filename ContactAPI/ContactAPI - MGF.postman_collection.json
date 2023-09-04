@@ -86,6 +86,28 @@
 			"response": []
 		},
 		{
+			"name": "Deleted Contacts List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/contactapi/src/api/contact/checkbin.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"contactapi",
+						"src",
+						"api",
+						"contact",
+						"checkbin.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Contact Soft Delete",
 			"request": {
 				"method": "PUT",

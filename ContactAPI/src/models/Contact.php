@@ -229,7 +229,8 @@
 
 
     
-    // Get Method : Checking to verify if contact is already deleted.
+    // Get Method : Checking to verify if contact is already deleted. 
+    // Check if a perticular contact is deleted.
     public function checkrestore() {
 
       // Check Deleted SINGLE Contact by ID
@@ -251,6 +252,29 @@
       return $stmt;
 
     }
+
+
+    // Get Method : Checking for all deleted contact
+    public function checkbin() {
+
+    
+      $query ="SELECT a.*, a.id as ContactID, b.*
+      FROM contacts a
+      LEFT JOIN companies b
+      ON a.company_id = b.id where a.is_deleted ";
+        
+      //$query ="select * from contacts where is_deleted = 0 and id = '{$id}'";
+
+      // Prepare statement wit the query
+      $stmt = $this->conn->prepare($query);
+
+      // Execute query to return data to statement variable.
+      $stmt->execute();
+
+      return $stmt;
+
+    }
+
 
    
   }

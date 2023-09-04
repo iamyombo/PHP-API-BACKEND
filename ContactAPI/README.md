@@ -58,6 +58,8 @@
 
 * Edit Contact : http://localhost/contactapi/src/api/contact/editcontact.php?id=117
 
+* DELETED CONTACT : http://localhost/contactapi/src/api/contact/checkbin.php
+
 
 and more in-process end points.
 
